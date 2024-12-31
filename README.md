@@ -15,7 +15,7 @@ A Python tool to export Confluence spaces to various formats (HTML, PDF, Markdow
 
 ## Prerequisites
 
-- Python 3.7 or higher
+- Python 3.8 or higher
 - [Poetry](https://python-poetry.org/docs/#installation) (Python dependency manager)
 
 ## Installation
