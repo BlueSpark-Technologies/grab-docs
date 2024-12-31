@@ -21,18 +21,22 @@ A Python tool to export Confluence spaces to various formats (HTML, PDF, Markdow
 ## Installation
 
 1. Clone the repository:
+```bash
 git clone <repository-url>
 cd confluence-exporter
-:
-bash
+```
+2. Install dependencies using Poetry:
+```bash
 poetry install
-:
-env
-CONFLUENCE_URL="https://your-domain.atlassian.net"
-USERNAME="your.email@company.com"
-API_TOKEN="your-api-token"
-
+```
+3. Set environment variables:
+```bash
+export CONFLUENCE_URL="https://your-domain.atlassian.net"
+export USERNAME="your.email@company.com"
+export API_TOKEN="your-api-token"
+```
 To get an API token:
+
 1. Log in to Atlassian account
 2. Go to Account Settings > Security > Create and manage API tokens
 3. Click "Create API token"
@@ -41,14 +45,23 @@ To get an API token:
 ## Usage
 
 Run the tool using Poetry:
-Basic usage
+### Basic usage
+```bash
 poetry run python main.py SPACE-KEY FORMAT
-With custom output directory
+```
+### With custom output directory
+```bash
 poetry run python main.py SPACE-KEY FORMAT --output-dir custom_directory
-
-Export to HTML
+```
+### Export to HTML
+```bash
 poetry run python main.py PSE html
-Export to PDF
+```
+### Export to PDF
+```bash
 poetry run python main.py PSE pdf
-Export to Markdown with custom directory
+```
+### Export to Markdown with custom directory
+```bash
 poetry run python main.py PSE md --output-dir documentation
+```
