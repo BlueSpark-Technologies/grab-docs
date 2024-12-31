@@ -34,5 +34,7 @@ ENV/
 *.swo
 
 # Project specific
-*_docs/
+pdf_docs/
+html_docs/
+md_docs/
 custom_directory/ 
