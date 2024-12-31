@@ -1,13 +1,13 @@
 [tool.poetry]
-name = "confluence-exporter"
+name = "grab-docs"
 version = "0.1.0"
 description = "Export Confluence spaces to various formats (HTML, PDF, Markdown)"
-authors = ["Your Name <your.email@example.com>"]
+authors = ["Horatiu Maiereanu <horatiu.maiereanu@bluespark.ro>"]
 readme = "README.md"
-packages = [{include = "confluence_exporter"}]
+packages = [{include = "grab_docs"}]
 
 [tool.poetry.dependencies]
-python = "^3.7"
+python = "^3.8.1"
 beautifulsoup4 = "^4.12.2"
 requests = "^2.31.0"
 reportlab = "^4.0.4"

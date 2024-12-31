@@ -47,21 +47,21 @@ To get an API token:
 Run the tool using Poetry:
 ### Basic usage
 ```bash
-poetry run python main.py SPACE-KEY FORMAT
+poetry run python grab_docs/main.py SPACE-KEY FORMAT
 ```
 ### With custom output directory
 ```bash
-poetry run python main.py SPACE-KEY FORMAT --output-dir custom_directory
+poetry run python grab_docs/main.py SPACE-KEY FORMAT --output-dir custom_directory
 ```
 ### Export to HTML
 ```bash
-poetry run python main.py PSE html
+poetry run python grab_docs/main.py PSE html
 ```
 ### Export to PDF
 ```bash
-poetry run python main.py PSE pdf
+poetry run python grab_docs/main.py PSE pdf
 ```
 ### Export to Markdown with custom directory
 ```bash
-poetry run python main.py PSE md --output-dir documentation
+poetry run python grab_docs/main.py PSE md --output-dir documentation
 ```
