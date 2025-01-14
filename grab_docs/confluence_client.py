@@ -12,7 +12,7 @@ class ConfluenceClient:
         
     def get_all_pages(self) -> List[Dict[str, Any]]:
         """Fetch all pages from a Confluence space."""
-        url = f"{self.base_url}/wiki/rest/api/space/{self.space_key}/content"
+        url = f"{self.base_url}/wiki/rest/api/space/{self.space_key}/content/page"
         pages = []
         start = 0
         limit = 50
@@ -25,12 +25,12 @@ class ConfluenceClient:
             )
             response.raise_for_status()
             data = response.json()
-            pages.extend(data['page']["results"])
+            pages.extend(data["results"])
 
             if "next" not in data["_links"]:
                 break
 
-            start += limit
+            url = data["_links"]["base"] + data["_links"]["next"]
             time.sleep(1)  # Be nice to the API
 
         return pages
